@@ -1,0 +1,93 @@
+*{
+    margin : 0;
+    padding : 0; 
+}
+body{
+    font-family: 'roboto', cursive;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*    HEADER      */
+
+.header{
+   height: 60px;
+    &__logo{
+        
+        text-align: center;
+        width: 100%;
+        font-family: 'shrikhand', cursive;
+    }
+    &__fleche{
+        position: absolute;
+        top : 20px;
+        left : 20px;
+        font-size: 25px;
+        color : $font-color1;
+    }
+    &__img{
+        position: relative;
+        width : 100%;
+        max-height: 800px;
+        object-fit: cover;      
+    }
+}
+
+/*     MENU      */
+
+.title__restaurant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 20px 20px;
+    font-family: 'Shrikhand',cursive;
+}
+.fa-heart{
+    font-size: 25px;;
+}
+.menu{
+    
+    background: $background-color1;
+    border-radius: 35px;
+    width: 100%;
+    padding : 20px 0px;
+    
+        &__title{
+            
+            margin-left : 20px;
+        }
+
+        &__plat{
+            background: white;
+            border-radius: 15px;
+            padding : 10px;
+            margin : 10px 20px;
+            
+            &--descrtiptif{
+                display: flex;
+                justify-content: space-between;
+            }
+            &--title{
+                margin-bottom: 5px;
+            }
+        }
+        &__btn{
+            text-align: center;
+            border-radius: 50px 50px;
+            padding: 15px 15px;
+            width: 200px;
+            background: linear-gradient(350deg, $primary-color 0%, $secondary-color 100%);
+            border : none;
+            font-size: 18px;
+            margin: 40px auto;
+            & p{
+                color: white;
+            }
+        }
+
+}
+
+
+

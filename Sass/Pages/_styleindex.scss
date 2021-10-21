@@ -1,0 +1,207 @@
+*{
+    margin : 0;
+    padding : 0; 
+}
+body{
+    font-family: 'roboto', cursive;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+    text-align: center;
+    padding : 20px 0;
+    box-shadow:  0 10px 15px rgba($shadow-color,.4) ;
+    display: inline-block;
+    width: 100%;    
+}
+
+
+/*        POSITION      */
+
+.location{
+    display: flex;
+    justify-content: center;
+    background-color: $background-color1;
+    height : 90px;
+    align-items: center;
+    color: $font-color1;
+    
+       
+    p{
+        font-weight: bold;
+        font-style: 80px;
+    }
+
+    &__icone{
+        margin-right: 25px;
+        font-size: 25px;
+        color : $font-color1;
+    }
+}
+
+/*     EXPLORE       */
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $background-color2;
+    margin-bottom: 25px;
+    height: 300px;
+        h1{
+            font-size: 35px;
+            text-align: center; 
+        }
+        h3{
+            text-align: center;
+            
+        }
+        &__btn{
+            border-radius: 50px 50px;
+            padding: 15px 15px;
+            color: white;
+            width: 250px;
+            height: 75px;
+            background: linear-gradient(350deg, $primary-color 0%, $secondary-color 100%);
+            border : none;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+}
+
+/*       FONCTIONNEMENT      */
+
+h2{
+    
+    margin-left: 70px;
+}
+.fonction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+        &__btn{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 320px;
+            margin: 30px 0px;
+            border : 1px solid $background-color2;
+            border-radius: 25px;
+            padding : 25px 0px;
+            padding-right: 40px;
+            background-color: $background-color2;
+            box-shadow: 0 0 15px $shadow-color ;
+        
+            &--number{
+                border-radius: 100%;
+                padding : 10px 15px 10px 15px;
+                position: relative;
+                left : -20px;
+                background-color: $primary-color;
+                color: white;
+                font-weight: bold ;
+            }
+            &--icone{
+                margin-right: 15px;
+                color : $font-color1;
+                font-size: 20px;    
+        }
+            &:hover{
+                background-color : rgba($primary-color, 0.2);
+                i{
+                    color: $primary-color;
+                }
+                
+            }
+        }
+
+        
+}
+
+/*      RESTAURANT       */
+
+
+.restaurants{
+    background-color: $background-color2;
+    padding : 20px 0px;
+    h2{
+        margin-left: 70px;
+    }
+}
+
+.restaurant{
+    
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'roboto',;
+        &__card{
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 15px 15px 15px 15px;
+            box-shadow: 0 0 15px $shadow-color ;
+            
+            &--img{
+                width : 350px;
+                height: 175px;
+                border-radius: 15px 15px 0px 0px;
+                object-fit: cover;
+            }
+        
+            &--link{
+            background-color: white;
+            border-radius: 15px;
+            
+        }
+            &--description{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin : 10px 10px;
+        }
+    }
+
+}
+
+/*      FOOTER     */
+
+.footer{
+   
+    background-color: $background-color3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+        &__title{
+        font-family: 'Shrikhand';
+        margin : 15px 20px;
+        font-size : 20px;
+        color : white;
+        }
+        &__links{
+            margin-left: 20px;        
+        }  
+        &__link{
+            display: flex;
+            color : white;
+            margin-bottom : 5px;
+
+            &--icone{
+                margin-right: 10px;
+            }
+            & a{
+                color : white;
+            }
+        }
+}
+
+
+
+
+/*# sourceMappingURL=style.css.map */
