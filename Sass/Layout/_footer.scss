@@ -1,7 +1,7 @@
 /*      FOOTER     */
 
 .footer{
-   
+    
     background-color: $background-color3;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,8 @@
         &__title{
         font-family: 'Shrikhand';
         margin : 15px 20px;
-        font-size : 20px;
+        font-size : 22px;
+        letter-spacing: 1px;
         
         color : white;
         }
@@ -19,12 +20,13 @@
             margin-left: 20px;        
         }  
         &__link{
-            display: flex;
+            
             color : white;
             margin-bottom : 5px;
 
             &--icone{
-                margin-right: 10px;
+             float: left;
+             margin-right: 1em;                   
             }
             & a{
                 color : white;

@@ -12,13 +12,13 @@ a {
   color: black;
 }
 
-.logo {
+.header {
   text-align: center;
-  padding: 20px 0;
+  width: 100%;
+  font-family: 'shrikhand', cursive;
+  display: inline-block;
   -webkit-box-shadow: 0 10px 15px rgba(128, 128, 128, 0.4);
           box-shadow: 0 10px 15px rgba(128, 128, 128, 0.4);
-  display: inline-block;
-  width: 100%;
 }
 
 /*        POSITION      */
@@ -39,7 +39,7 @@ a {
 
 .location p {
   font-weight: bold;
-  font-style: 80px;
+  font-size: 25px;
 }
 
 .location__icone {
@@ -65,6 +65,7 @@ a {
   background-color: #f6f6f6;
   margin-bottom: 25px;
   height: 300px;
+  padding-top: 25px;
 }
 
 .explore h1 {
@@ -86,11 +87,19 @@ a {
   border: none;
   font-size: 18px;
   margin-bottom: 40px;
+  -webkit-box-shadow: 0 0 15px grey;
+          box-shadow: 0 0 15px grey;
+}
+
+.explore__btn:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0 0 15px #2e2d2d;
+          box-shadow: 0 0 15px #2e2d2d;
 }
 
 /*       FONCTIONNEMENT      */
 h2 {
-  margin-left: 70px;
+  margin-left: 30px;
 }
 
 .fonction {
@@ -119,7 +128,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 320px;
+  width: 75%;
   margin: 30px 0px;
   border: 1px solid #f6f6f6;
   border-radius: 25px;
@@ -161,7 +170,7 @@ h2 {
 }
 
 .restaurants h2 {
-  margin-left: 70px;
+  margin-left: 30px;
 }
 
 .restaurant {
@@ -183,6 +192,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90%;
   margin-bottom: 20px;
   border-radius: 15px 15px 15px 15px;
   -webkit-box-shadow: 0 0 15px grey;
@@ -190,16 +200,31 @@ h2 {
 }
 
 .restaurant__card--img {
-  width: 350px;
+  width: 100%;
   height: 175px;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.restaurant__card--new {
+  position: absolute;
+  z-index: 1;
+  color: #199577;
+  background-color: #99e2d0;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-top: -160px;
+  margin-left: 66vw;
+  font-weight: bold;
 }
 
 .restaurant__card--link {
   background-color: white;
   border-radius: 15px;
+  width: 100%;
 }
 
 .restaurant__card--description {
@@ -213,48 +238,6 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 10px 10px;
-}
-
-/*      FOOTER     */
-.footer {
-  background-color: #353535;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.footer__title {
-  font-family: 'Shrikhand';
-  margin: 15px 20px;
-  font-size: 20px;
-  color: white;
-}
-
-.footer__links {
-  margin-left: 20px;
-}
-
-.footer__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: white;
-  margin-bottom: 5px;
-}
-
-.footer__link--icone {
-  margin-right: 10px;
-}
-
-.footer__link a {
-  color: white;
 }
 * {
   margin: 0;
@@ -271,26 +254,25 @@ a {
 }
 
 /*    HEADER      */
-.header {
-  height: 60px;
-}
-
-.header__logo {
-  text-align: center;
-  width: 100%;
-  font-family: 'shrikhand', cursive;
-}
-
 .header__fleche {
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: 20px;
   font-size: 25px;
   color: #353535;
+  z-index: 1;
+}
+
+.header__logo {
+  position: relative;
+  margin: 20px 0px;
+  text-align: center;
+  width: 100%;
+  font-family: 'shrikhand', cursive;
+  z-index: 0;
 }
 
 .header__img {
-  position: relative;
   width: 100%;
   max-height: 800px;
   -o-object-fit: cover;
@@ -317,21 +299,58 @@ a {
 }
 
 .menu {
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
   background: #eaeaea;
-  border-radius: 35px;
+  border-radius: 35px 35px 0px 0px;
   width: 100%;
   padding: 20px 0px;
+}
+
+.menu__intitule {
+  width: 98%;
 }
 
 .menu__title {
   margin-left: 20px;
 }
 
+.menu__plat:hover .menu__plat--check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #99e2d0;
+  width: 70px;
+  background: #99e2d0;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+  height: 100%;
+  margin-left: 10px;
+  visibility: visible;
+}
+
 .menu__plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
   border-radius: 15px;
-  padding: 10px;
+  height: 70px;
   margin: 10px 20px;
+  padding-left: 20px;
 }
 
 .menu__plat--descrtiptif {
@@ -347,6 +366,10 @@ a {
   margin-bottom: 5px;
 }
 
+.menu__plat--check {
+  visibility: hidden;
+}
+
 .menu__btn {
   text-align: center;
   border-radius: 50px 50px;
@@ -360,6 +383,12 @@ a {
 
 .menu__btn p {
   color: white;
+}
+
+.menu__btn:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0 0 15px #2e2d2d;
+          box-shadow: 0 0 15px #2e2d2d;
 }
 
 /*      FOOTER     */
@@ -381,7 +410,8 @@ a {
 .footer__title {
   font-family: 'Shrikhand';
   margin: 15px 20px;
-  font-size: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
   color: white;
 }
 
@@ -390,18 +420,62 @@ a {
 }
 
 .footer__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: white;
   margin-bottom: 5px;
 }
 
 .footer__link--icone {
-  margin-right: 10px;
+  float: left;
+  margin-right: 1em;
 }
 
 .footer__link a {
   color: white;
+}
+
+/*.menu__plat{
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+
+@keyframes slide {
+   from {
+       margin-left : 100%;
+       width : 300%
+   }
+   to{
+       margin-left: 0%;
+       width : 100%
+   }
+}
+*/
+.menu__plat:hover {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

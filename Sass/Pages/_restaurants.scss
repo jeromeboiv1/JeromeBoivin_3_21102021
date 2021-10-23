@@ -13,25 +13,29 @@ a{
 /*    HEADER      */
 
 .header{
-   height: 60px;
-    &__logo{
-        
-        text-align: center;
-        width: 100%;
-        font-family: 'shrikhand', cursive;
-    }
     &__fleche{
-        position: absolute;
-        top : 20px;
+        position : absolute;
+        top : 25px;
         left : 20px;
         font-size: 25px;
         color : $font-color1;
+        z-index: 1;
+        
     }
-    &__img{
+    &__logo{
         position: relative;
+        margin : 20px 0px; 
+        text-align: center;
+        width: 100%;
+        font-family: 'shrikhand', cursive;  
+        z-index: 0;
+    }
+    
+    &__img{
+        
         width : 100%;
         max-height: 800px;
-        object-fit: cover;      
+        object-fit: cover;     
     }
 }
 
@@ -43,27 +47,50 @@ a{
     align-items: center;
     margin : 20px 20px;
     font-family: 'Shrikhand',cursive;
+    
 }
 .fa-heart{
     font-size: 25px;;
 }
 .menu{
-    
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
     background: $background-color1;
-    border-radius: 35px;
+    border-radius: 35px 35px 0px 0px;
     width: 100%;
     padding : 20px 0px;
-    
+
+        &__intitule{
+            width : 98%;
+        }
         &__title{
-            
             margin-left : 20px;
         }
-
+        &__plat:hover{
+            .menu__plat--check{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border : 1px solid $color-new1;
+                width : 70px;
+                background: $color-new1;
+                color :white;
+                border-radius: 0px 15px 15px 0px;
+                height : 100%;
+                margin-left : 10px;
+                visibility: visible;  
+            }
+        }
         &__plat{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: white;
             border-radius: 15px;
-            padding : 10px;
+            height: 70px;
             margin : 10px 20px;
+            padding-left: 20px;
             
             &--descrtiptif{
                 display: flex;
@@ -72,6 +99,10 @@ a{
             &--title{
                 margin-bottom: 5px;
             }
+            &--check{
+                  visibility: hidden;           
+            }
+            
         }
         &__btn{
             text-align: center;
@@ -84,8 +115,13 @@ a{
             margin: 40px auto;
             & p{
                 color: white;
+                }
             }
-        }
+            &__btn:hover{
+                opacity: 0.8;
+               box-shadow: 0 0 15px $shadow-color2;
+                           }
+
 
 }
 
