@@ -1,26 +1,8 @@
-/*.menu__plat{
-    animation-name: slide;
-    animation-duration: 2s;
-}
-
-
-@keyframes slide {
-   from {
-       top :0%;
-       width : 300%;
-   }
-   to{
-       top: 0%;
-       width : 100%;
-   }
-}
-*/
-
 ////// animmation pour les plats ///////
 
 .menu__plat--check{
     width: 0;
-    transition : width 1s;
+    transition : width 800ms;
     
 }
 .menu__plat:hover i {
@@ -32,15 +14,35 @@
     transition: transform 800ms;
   }
 
-.menu__plat{
+.plat1{
     animation-name: slidedown;
-    animation-duration: 1s;
+    animation-duration: 1500ms;
+    opacity: 0;
+    animation-fill-mode: forwards ;
+    animation-delay: 200ms;
+}
+.plat2{
+    animation-name: slidedown;
+    animation-duration: 1800ms;
+    opacity: 0;
+    animation-fill-mode: forwards ;
+    animation-delay: 500ms;
+}
+.plat3{
+    animation-name: slidedown;
+    animation-duration: 2100ms;
+    opacity: 0;
+    animation-fill-mode: forwards ;
+    animation-delay: 800ms;
 }
 @keyframes slidedown {
     from{
-        top : 0%;
+        transition-timing-function: ease-in-out;
+        transform: translateY(30px);
+        
     }
     to{
-        top :100%;
+        transform: translateY(0);
+        opacity: 1;
     }
 }

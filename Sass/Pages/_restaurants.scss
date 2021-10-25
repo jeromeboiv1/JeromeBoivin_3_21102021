@@ -15,24 +15,22 @@ a{
 .header{
     &__fleche{
         position : absolute;
+        z-index: 1;
         top : 25px;
         left : 20px;
         font-size: 25px;
         color : $font-color1;
-        z-index: 1;
-        
     }
     &__logo{
         position: relative;
+        z-index: 0;
         margin : 20px 0px; 
         text-align: center;
         width: 100%;
         font-family: 'shrikhand', cursive;  
-        z-index: 0;
     }
     
     &__img{
-        
         width : 100%;
         max-height: 800px;
         object-fit: cover;     
@@ -57,31 +55,29 @@ a{
     z-index: 1;
     margin-top: -40px;
     background: $background-color1;
-    border-radius: 35px 35px 0px 0px;
+    border-radius: 35px 35px 0 0;
     width: 100%;
-    padding : 20px 0px;
+    padding : 20px 0;
 
         &__intitule{
             width : 98%;
         }
         &__title{
-            margin-left : 20px;
+            margin : 35px 0 35px 20px;
         }
         &__plat:hover{
             .menu__plat--check{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                visibility: visible;  
                 border : 1px solid $color-new1;
                 width : 70px;
                 background: $color-new1;
                 color :white;
-                border-radius: 0px 15px 15px 0px;
+                border-radius: 0 15px 15px 0;
                 height : 100%;
                 margin-left : 10px;
-                
-            
-                visibility: visible;  
             }
         }
         &__plat{
@@ -102,8 +98,8 @@ a{
                 margin-bottom: 5px;
             }
             &--check i{
-                font-size: 30px;
                 overflow: hidden;
+                font-size: 30px;
             }
             &--check{
                   visibility: hidden;           

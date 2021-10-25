@@ -258,20 +258,20 @@ a {
 /*    HEADER      */
 .header__fleche {
   position: absolute;
+  z-index: 1;
   top: 25px;
   left: 20px;
   font-size: 25px;
   color: #353535;
-  z-index: 1;
 }
 
 .header__logo {
   position: relative;
+  z-index: 0;
   margin: 20px 0px;
   text-align: center;
   width: 100%;
   font-family: 'shrikhand', cursive;
-  z-index: 0;
 }
 
 .header__img {
@@ -305,9 +305,9 @@ a {
   z-index: 1;
   margin-top: -40px;
   background: #eaeaea;
-  border-radius: 35px 35px 0px 0px;
+  border-radius: 35px 35px 0 0;
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 
 .menu__intitule {
@@ -315,7 +315,7 @@ a {
 }
 
 .menu__title {
-  margin-left: 20px;
+  margin: 35px 0 35px 20px;
 }
 
 .menu__plat:hover .menu__plat--check {
@@ -328,14 +328,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: visible;
   border: 1px solid #99e2d0;
   width: 70px;
   background: #99e2d0;
   color: white;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0 15px 15px 0;
   height: 100%;
   margin-left: 10px;
-  visibility: visible;
 }
 
 .menu__plat {
@@ -369,8 +369,8 @@ a {
 }
 
 .menu__plat--check i {
-  font-size: 30px;
   overflow: hidden;
+  font-size: 30px;
 }
 
 .menu__plat--check {
@@ -466,8 +466,8 @@ a {
 */
 .menu__plat--check {
   width: 0;
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  -webkit-transition: width 800ms;
+  transition: width 800ms;
 }
 
 .menu__plat:hover i {
@@ -486,28 +486,67 @@ a {
   transition: transform 800ms, -webkit-transform 800ms;
 }
 
-.menu__plat {
+.plat1 {
   -webkit-animation-name: slidedown;
           animation-name: slidedown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.plat2 {
+  -webkit-animation-name: slidedown;
+          animation-name: slidedown;
+  -webkit-animation-duration: 1800ms;
+          animation-duration: 1800ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.plat3 {
+  -webkit-animation-name: slidedown;
+          animation-name: slidedown;
+  -webkit-animation-duration: 2100ms;
+          animation-duration: 2100ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }
 
 @-webkit-keyframes slidedown {
   from {
-    top: 0%;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   to {
-    top: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes slidedown {
   from {
-    top: 0%;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   to {
-    top: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
