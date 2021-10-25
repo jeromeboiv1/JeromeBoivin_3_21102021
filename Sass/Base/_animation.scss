@@ -6,28 +6,41 @@
 
 @keyframes slide {
    from {
-       margin-left : 100%;
-       width : 300%
+       top :0%;
+       width : 300%;
    }
    to{
-       margin-left: 0%;
-       width : 100%
+       top: 0%;
+       width : 100%;
    }
 }
 */
-.menu__plat:hover{
-    animation-name: slide;
-    animation-duration: 2s;
+
+////// animmation pour les plats ///////
+
+.menu__plat--check{
+    width: 0;
+    transition : width 1s;
+    
 }
+.menu__plat:hover i {
+    transform: rotate(0deg);
+  }
+  .fa-check-circle{
+    transform: rotate(-180deg);
+    transition-delay:100ms;
+    transition: transform 800ms;
+  }
 
-
-@keyframes slide {
-   from {
-       margin-left : 100%;
-       width : 300%
-   }
-   to{
-       margin-left: 0%;
-       width : 100%
-   }
+.menu__plat{
+    animation-name: slidedown;
+    animation-duration: 1s;
+}
+@keyframes slidedown {
+    from{
+        top : 0%;
+    }
+    to{
+        top :100%;
+    }
 }

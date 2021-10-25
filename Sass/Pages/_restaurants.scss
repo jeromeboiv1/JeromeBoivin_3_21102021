@@ -79,6 +79,8 @@ a{
                 border-radius: 0px 15px 15px 0px;
                 height : 100%;
                 margin-left : 10px;
+                
+            
                 visibility: visible;  
             }
         }
@@ -98,6 +100,10 @@ a{
             }
             &--title{
                 margin-bottom: 5px;
+            }
+            &--check i{
+                font-size: 30px;
+                overflow: hidden;
             }
             &--check{
                   visibility: hidden;           
@@ -124,6 +130,7 @@ a{
 
 
 }
+
 
 
 
