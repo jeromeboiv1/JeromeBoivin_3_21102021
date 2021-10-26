@@ -223,6 +223,14 @@ h2 {
   font-weight: bold;
 }
 
+.restaurant__card--gradient {
+  position: absolute;
+  z-index: 3;
+  height: 30px;
+  width: 30px;
+  background-color: red;
+}
+
 .restaurant__card--link {
   background-color: white;
   border-radius: 15px;
@@ -316,6 +324,10 @@ a {
 
 .menu__title {
   margin: 35px 0 35px 20px;
+  border-bottom: 3px #99e2d0 solid;
+  width: 40px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .menu__plat:hover .menu__plat--check {
@@ -447,23 +459,6 @@ a {
   color: white;
 }
 
-/*.menu__plat{
-    animation-name: slide;
-    animation-duration: 2s;
-}
-
-
-@keyframes slide {
-   from {
-       top :0%;
-       width : 300%;
-   }
-   to{
-       top: 0%;
-       width : 100%;
-   }
-}
-*/
 .menu__plat--check {
   width: 0;
   -webkit-transition: width 800ms;
@@ -522,6 +517,18 @@ a {
           animation-delay: 800ms;
 }
 
+.plat4 {
+  -webkit-animation-name: slidedown;
+          animation-name: slidedown;
+  -webkit-animation-duration: 2100ms;
+          animation-duration: 2100ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
 @-webkit-keyframes slidedown {
   from {
     -webkit-transition-timing-function: ease-in-out;
@@ -549,4 +556,66 @@ a {
     opacity: 1;
   }
 }
+
+/*.loader{
+    position : fixed;
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width : 100%;
+    font-family: 'Shrikhand', cursive;
+    font-size : 50px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    color : white;
+    background-color: white;
+    opacity: 0.8; 
+    visibility: visible;
+    animation : loader .5s linear forwards;
+
+    &__barre{
+            width : 15px;
+            height: 50px;
+            background-color: $secondary-color;
+            margin-right: 40px;
+            animation:barres__grow 1.5s linear infinite;
+        }
+            &__barre:before{
+            content: '';
+            display: block;
+            position :absolute;
+            left : 25px;
+            top : 0;
+            width : 15px;
+            height: 50px;
+            background-color: $primary-color;
+            margin-right: 20px;
+            animation :barres__grow 1.5s linear infinite;
+        }
+            &__barre:after{
+            content: '';
+            display: block;
+            position :absolute;
+            left : -25px;
+            top : 0;
+            width : 15px;
+            height: 50px;
+            background-color: $tertiary-color;
+            margin-right: 20px;
+            animation:barres__grow 1.5s linear infinite;
+        }  
+}
+@keyframes barres__grow{
+    0%{ transform: scaleY(0); opacity : 0; }
+    50%{transform : scaleY(1); opacity: 1;}
+    100%{ transform : scaleY(0); opacity: 0;}
+}
+
+@keyframes loader{
+    0%{visibility: visible;}
+    100%{visibility: hidden;}
+}
+*/
 /*# sourceMappingURL=main.css.map */

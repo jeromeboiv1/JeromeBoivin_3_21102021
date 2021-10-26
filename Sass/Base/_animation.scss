@@ -1,9 +1,9 @@
 ////// animmation pour les plats ///////
 
+/////   CHECK  /////
 .menu__plat--check{
     width: 0;
-    transition : width 800ms;
-    
+    transition : width 800ms;    
 }
 .menu__plat:hover i {
     transform: rotate(0deg);
@@ -13,6 +13,8 @@
     transition-delay:100ms;
     transition: transform 800ms;
   }
+
+///////  APPARITION  ///////
 
 .plat1{
     animation-name: slidedown;
@@ -35,6 +37,13 @@
     animation-fill-mode: forwards ;
     animation-delay: 800ms;
 }
+.plat4{
+    animation-name: slidedown;
+    animation-duration: 2100ms;
+    opacity: 0;
+    animation-fill-mode: forwards ;
+    animation-delay: 1200ms;
+}
 @keyframes slidedown {
     from{
         transition-timing-function: ease-in-out;
@@ -46,3 +55,75 @@
         opacity: 1;
     }
 }
+
+////////  PAGE LOADER   ///////
+
+/*.loader{
+    position : fixed;
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width : 100%;
+    font-family: 'Shrikhand', cursive;
+    font-size : 50px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    color : white;
+    background-color: white;
+    opacity: 0.8; 
+    visibility: visible;
+    animation : loader .5s linear forwards;
+
+    &__barre{
+            width : 15px;
+            height: 50px;
+            background-color: $secondary-color;
+            margin-right: 40px;
+            animation:barres__grow 1.5s linear infinite;
+        }
+            &__barre:before{
+            content: '';
+            display: block;
+            position :absolute;
+            left : 25px;
+            top : 0;
+            width : 15px;
+            height: 50px;
+            background-color: $primary-color;
+            margin-right: 20px;
+            animation :barres__grow 1.5s linear infinite;
+        }
+            &__barre:after{
+            content: '';
+            display: block;
+            position :absolute;
+            left : -25px;
+            top : 0;
+            width : 15px;
+            height: 50px;
+            background-color: $tertiary-color;
+            margin-right: 20px;
+            animation:barres__grow 1.5s linear infinite;
+        }  
+}
+@keyframes barres__grow{
+    0%{ transform: scaleY(0); opacity : 0; }
+    50%{transform : scaleY(1); opacity: 1;}
+    100%{ transform : scaleY(0); opacity: 0;}
+}
+
+@keyframes loader{
+    0%{visibility: visible;}
+    100%{visibility: hidden;}
+}
+*/
+////////// Animation coeur   ////////
+
+
+
+
+
+
+

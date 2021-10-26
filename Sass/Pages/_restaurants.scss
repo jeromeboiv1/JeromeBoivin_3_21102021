@@ -64,6 +64,10 @@ a{
         }
         &__title{
             margin : 35px 0 35px 20px;
+            border-bottom: 3px $color-new1 solid;
+            width : 40px;
+            padding-bottom: 5px;
+            text-transform: uppercase;
         }
         &__plat:hover{
             .menu__plat--check{
