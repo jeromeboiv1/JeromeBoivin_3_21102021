@@ -10,13 +10,14 @@ a{
     color: black;
 }
 
+
 /*    HEADER      */
 
 .header{
     &__fleche{
         position : absolute;
         z-index: 1;
-        top : 25px;
+        top : 45px;
         left : 20px;
         font-size: 25px;
         color : $font-color1;
@@ -32,7 +33,7 @@ a{
     
     &__img{
         width : 100%;
-        max-height: 800px;
+        max-height: 400px;
         object-fit: cover;     
     }
 }
@@ -45,7 +46,26 @@ a{
     align-items: center;
     margin : 20px 20px;
     font-family: 'Shrikhand',cursive;
-    
+
+    &--coeurplein{
+        position : absolute;
+        z-index: 1;
+        background : linear-gradient(350deg, $primary-color 0%, $secondary-color 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+    }
+    &--coeurvide{
+        position : relative;
+        z-index: 0;
+    }
+    &--coeurplein:hover {
+        animation : coeurplein 1s linear forwards;
+    }
+    &--coeurplein:hover ~ &--coeurvide{
+        color: transparent;
+    } 
 }
 .fa-heart{
     font-size: 25px;;
@@ -60,6 +80,7 @@ a{
     padding : 20px 0;
 
         &__intitule{
+            overflow: hidden;
             width : 98%;
         }
         &__title{
@@ -68,7 +89,10 @@ a{
             width : 40px;
             padding-bottom: 5px;
             text-transform: uppercase;
+            
+            
         }
+        
         &__plat:hover{
             .menu__plat--check{
                 display: flex;
@@ -82,6 +106,7 @@ a{
                 border-radius: 0 15px 15px 0;
                 height : 100%;
                 margin-left : 10px;
+                
             }
         }
         &__plat{
@@ -93,20 +118,31 @@ a{
             height: 70px;
             margin : 10px 20px;
             padding-left: 20px;
+            overflow: hidden;
             
             &--descrtiptif{
                 display: flex;
                 justify-content: space-between;
+                overflow: hidden;
             }
             &--title{
                 margin-bottom: 5px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;                
+                }
+                &--title h3, p:first-child{
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    
             }
             &--check i{
-                overflow: hidden;
+                
                 font-size: 30px;
             }
             &--check{
-                  visibility: hidden;           
+                  visibility: hidden;         
             }
             
         }
@@ -131,6 +167,24 @@ a{
 
 }
 
+@media screen and (min-width: 850px) {
+    .test2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+    .test1{
+        width: 100%;
+        overflow: hidden;
+    }
+    header img{
+        height : 400px
+    }
+}
+@media screen and (max-width: 849px) {
+  
+}
 
 
 

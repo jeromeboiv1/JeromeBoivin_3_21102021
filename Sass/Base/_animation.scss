@@ -7,10 +7,11 @@
 }
 .menu__plat:hover i {
     transform: rotate(0deg);
+    
   }
   .fa-check-circle{
     transform: rotate(-180deg);
-    transition-delay:100ms;
+    transition-delay:500ms;
     transition: transform 800ms;
   }
 
@@ -58,7 +59,7 @@
 
 ////////  PAGE LOADER   ///////
 
-/*.loader{
+.loader{
     position : fixed;
     display: flex;
     z-index: 10;
@@ -66,48 +67,52 @@
     align-items: center;
     height: 100%;
     width : 100%;
-    font-family: 'Shrikhand', cursive;
-    font-size : 50px;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: black;
-    color : white;
     background-color: white;
-    opacity: 0.8; 
     visibility: visible;
     animation : loader .5s linear forwards;
+    opacity: .9;
 
+    &__text{
+        font-family: 'Shrikhand', cursive;
+        font-size : 50px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: black;
+        color : white;
+        opacity: 1;
+    }
     &__barre{
             width : 15px;
             height: 50px;
-            background-color: $secondary-color;
+            background-color: $primary-color;
             margin-right: 40px;
-            animation:barres__grow 1.5s linear infinite;
+            animation:barres__grow 1s linear infinite;
         }
             &__barre:before{
             content: '';
             display: block;
-            position :absolute;
+            position :relative;
             left : 25px;
             top : 0;
             width : 15px;
             height: 50px;
-            background-color: $primary-color;
+            background-color: $secondary-color;
             margin-right: 20px;
-            animation :barres__grow 1.5s linear infinite;
+            animation :barres__grow 1s linear infinite;
         }
             &__barre:after{
             content: '';
             display: block;
-            position :absolute;
+            position :relative;
             left : -25px;
-            top : 0;
+            top : -50px;
             width : 15px;
             height: 50px;
             background-color: $tertiary-color;
             margin-right: 20px;
-            animation:barres__grow 1.5s linear infinite;
+            animation:barres__grow 1s linear infinite;
         }  
 }
+
 @keyframes barres__grow{
     0%{ transform: scaleY(0); opacity : 0; }
     50%{transform : scaleY(1); opacity: 1;}
@@ -118,12 +123,26 @@
     0%{visibility: visible;}
     100%{visibility: hidden;}
 }
-*/
+
 ////////// Animation coeur   ////////
 
+/*@keyframes coeurplein {
+    from{   
+        transform: scaleY(0); 
+        opacity: 0;
+        }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+        }    
+}*/
 
-
-
+@keyframes coeurplein {
+    from{ 
+        opacity: 0;}
+    to {
+        opacity: 1;}    
+}
 
 
 

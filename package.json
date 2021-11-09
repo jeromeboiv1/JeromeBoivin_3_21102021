@@ -1,10 +1,12 @@
 {
   "name": "p3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet 3 : Ohmyfood",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/main.scss:./public/css/style.css -w --style compressed",
+      "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
