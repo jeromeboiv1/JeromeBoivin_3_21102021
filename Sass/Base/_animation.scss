@@ -15,7 +15,7 @@
     transition: transform 800ms;
   }
 
-///////  APPARITION  ///////
+///////  APPARITION  DES  PLATS  ///////
 
 .plat1{
     animation-name: slidedown;
@@ -126,16 +126,6 @@
 
 ////////// Animation coeur   ////////
 
-/*@keyframes coeurplein {
-    from{   
-        transform: scaleY(0); 
-        opacity: 0;
-        }
-    to {
-        transform: scaleY(1);
-        opacity: 1;
-        }    
-}*/
 
 @keyframes coeurplein {
     from{ 

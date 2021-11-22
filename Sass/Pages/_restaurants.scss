@@ -167,14 +167,16 @@ a{
 
 }
 
-@media screen and (min-width: 850px) {
-    .test2{
+//////   MEDIA QUERIES   //////
+
+@media screen and (min-width: 1000px) {
+    .menu1{
     display: flex;
     flex-direction: row;
     width: 100%;
     
 }
-    .test1{
+    .menu2{
         width: 100%;
         overflow: hidden;
     }
@@ -182,8 +184,11 @@ a{
         height : 400px
     }
 }
-@media screen and (max-width: 849px) {
-  
+@media (min-width: 640px) and (max-width: 999px) {
+    .menu__plat{
+        max-width: 600px;
+        margin : 10px auto;
+    }
 }
 
 
