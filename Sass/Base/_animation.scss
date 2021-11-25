@@ -6,10 +6,9 @@
     transition : width 800ms;    
 }
 .menu__plat:hover i {
-    transform: rotate(0deg);
-    
+    transform: rotate(0deg)
   }
-  .fa-check-circle{
+.fa-check-circle{
     transform: rotate(-180deg);
     transition-delay:500ms;
     transition: transform 800ms;
@@ -18,38 +17,63 @@
 ///////  APPARITION  DES  PLATS  ///////
 
 .plat1{
-    animation-name: slidedown;
-    animation-duration: 1500ms;
+    -webkit-animation-name: slidedown;
+            animation-name: slidedown;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms;
     opacity: 0;
-    animation-fill-mode: forwards ;
-    animation-delay: 200ms;
+    -webkit-animation-fill-mode: forwards ;
+            animation-fill-mode: forwards ;
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
 }
 .plat2{
-    animation-name: slidedown;
-    animation-duration: 1800ms;
+    -webkit-animation-name: slidedown;
+            animation-name: slidedown;
+    -webkit-animation-duration: 1800ms;
+            animation-duration: 1800ms;
     opacity: 0;
-    animation-fill-mode: forwards ;
-    animation-delay: 500ms;
+    -webkit-animation-fill-mode: forwards ;
+            animation-fill-mode: forwards ;
+    -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
 }
 .plat3{
-    animation-name: slidedown;
-    animation-duration: 2100ms;
+    -webkit-animation-name: slidedown;
+            animation-name: slidedown;
+    -webkit-animation-duration: 2100ms;
+            animation-duration: 2100ms;
     opacity: 0;
-    animation-fill-mode: forwards ;
-    animation-delay: 800ms;
+    -webkit-animation-fill-mode: forwards ;
+            animation-fill-mode: forwards ;
+    -webkit-animation-delay: 800ms;
+            animation-delay: 800ms;
 }
 .plat4{
-    animation-name: slidedown;
-    animation-duration: 2100ms;
+    -webkit-animation-name: slidedown;
+            animation-name: slidedown;
+    -webkit-animation-duration: 2100ms;
+            animation-duration: 2100ms;
     opacity: 0;
-    animation-fill-mode: forwards ;
-    animation-delay: 1200ms;
+    -webkit-animation-fill-mode: forwards ;
+            animation-fill-mode: forwards ;
+    -webkit-animation-delay: 1200ms;
+            animation-delay: 1200ms;
+}
+@-webkit-keyframes slidedown {
+    from{
+        transition-timing-function: ease-in-out;
+        transform: translateY(30px); 
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 @keyframes slidedown {
     from{
         transition-timing-function: ease-in-out;
-        transform: translateY(30px);
-        
+        transform: translateY(30px); 
     }
     to{
         transform: translateY(0);
@@ -69,7 +93,8 @@
     width : 100%;
     background-color: white;
     visibility: visible;
-    animation : loader .5s linear forwards;
+    -webkit-animation : loader 2s linear forwards;
+            animation : loader 2s linear forwards;
     opacity: .9;
 
     &__text{
@@ -85,7 +110,8 @@
             height: 50px;
             background-color: $primary-color;
             margin-right: 40px;
-            animation:barres__grow 1s linear infinite;
+            -webkit-animation:barres__grow 1s linear infinite;
+                    animation:barres__grow 1s linear infinite;
         }
             &__barre:before{
             content: '';
@@ -97,7 +123,8 @@
             height: 50px;
             background-color: $secondary-color;
             margin-right: 20px;
-            animation :barres__grow 1s linear infinite;
+            -webkit-animation :barres__grow 1s linear infinite;
+                    animation :barres__grow 1s linear infinite;
         }
             &__barre:after{
             content: '';
@@ -109,14 +136,26 @@
             height: 50px;
             background-color: $tertiary-color;
             margin-right: 20px;
-            animation:barres__grow 1s linear infinite;
+            -webkit-animation:barres__grow 1s linear infinite;
+                    animation:barres__grow 1s linear infinite;
         }  
+}
+
+@-webkit-keyframes barres__grow{
+    0%{ transform: scaleY(0); opacity : 0; }
+    50%{transform : scaleY(1); opacity: 1;}
+    100%{ transform : scaleY(0); opacity: 0;}
 }
 
 @keyframes barres__grow{
     0%{ transform: scaleY(0); opacity : 0; }
     50%{transform : scaleY(1); opacity: 1;}
     100%{ transform : scaleY(0); opacity: 0;}
+}
+
+@-webkit-keyframes loader{
+    0%{visibility: visible;}
+    100%{visibility: hidden;}
 }
 
 @keyframes loader{
@@ -126,8 +165,14 @@
 
 ////////// Animation coeur   ////////
 
+@-webkit-keyframes coeurplein{
+    from{ 
+        opacity: 0;}
+    to {
+        opacity: 1;}    
+}
 
-@keyframes coeurplein {
+@keyframes coeurplein{
     from{ 
         opacity: 0;}
     to {

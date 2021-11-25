@@ -13,47 +13,10 @@ a{
     text-align: center;
     width: 100%;
     font-family: 'shrikhand', cursive;
-    font-size: 30px;
+    font-size: 25px;
     display: inline-block;
-    box-shadow:  0 10px 15px rgba($shadow-color,.4) ; 
-}
+    box-shadow:  0 10px 15px rgba($shadow-color,.4) ;
 
-//////  MEDIA QUERIES  //////
-
-@media screen and (min-width: 850px) {
-    .fonction{
-        flex-direction: row;
-        
-            &__btn{
-                margin : 0 20px;
-                max-width: 25%;
-                text-align: center;
-            }
-    }
-    .restaurant{
-        display: flex;
-        justify-content: center;
-        
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        
-        &__card{
-            margin : 25px;
-            width: 40%;
-        }
-    }
-}
-@media screen and (max-width: 849px) {
-    .fonction{
-        flex-direction: column;
-    }
-    .restaurant{
-        flex-direction: column;
-        &__card{
-            width: 90%;
-        }
-    }
 }
 
 //////    POSITION    //////
@@ -62,17 +25,37 @@ a{
     display: flex;
     justify-content: center;
     background-color: $background-color1;
-    height : 90px;
-    align-items: center;
-    color: $font-color1;      
+    height : 65px;
+    align-items: center;     
     p{
         font-weight: bold;
         font-size: 25px;
     }
-
     &__icone{
         margin-right: 25px;
         font-size: 25px;
+        color : $font-color1;
+    }
+    &__form--search{
+        border: none;
+        background-color: $background-color1; 
+        font-size: 20px;
+        font-weight: 600;
+        width: 180px;
+    }
+    &__form--search::-webkit-input-placeholder{
+        color : $font-color1;
+    }
+    &__form--search::-moz-placeholder{
+        color : $font-color1;
+    }
+    &__form--search:-ms-input-placeholder{
+        color : $font-color1;
+    }
+    &__form--search::-ms-input-placeholder{
+        color : $font-color1;
+    }
+    &__form--search::placeholder{
         color : $font-color1;
     }
 }
@@ -88,7 +71,7 @@ a{
     margin-bottom: 40px;
     padding-top: 25px;;
         h1{
-            font-size: 35px;
+            font-size: 30px;
             text-align: center;
             margin : 30px 50px;
         }
@@ -114,21 +97,20 @@ a{
                opacity: 0.9;
                box-shadow: 0 0 15px $shadow-color2;
             }
-            
 }
 
 //////     FONCTIONNEMENT    //////
 
 h2{
     margin-left: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .fonction{
     display: flex;
     justify-content: center;
     align-items: center;
     
-    margin : 40px 0px;   
+    margin : 30px 0px;   
     
         &__btn{
             display: flex;
@@ -193,9 +175,10 @@ h2{
             
             &--img{
                 width: 100%;
-                height: 175px;
+                height: 250px;
                 border-radius: 15px 15px 0px 0px;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
                 position: relative;
                 z-index: 0;
             }
@@ -203,7 +186,7 @@ h2{
                 position : relative;
                 z-index : 1;
                 float : right;
-                margin-top: -160px;
+                margin-top: -235px;
                 margin-right: 30px;
                 color : $color-new2;
                 background-color: $color-new1;
@@ -212,7 +195,6 @@ h2{
                 width : 70px;
                 font-weight: bold; 
             }
-            
             &--plein{
                 position : absolute;
                 z-index: 1;
@@ -221,20 +203,22 @@ h2{
                 -webkit-background-clip: text;
                 color: transparent;
                 opacity: 0;
+                margin-right : 25px;
             }
             &--vide{
                 position : relative;
                 z-index: 0;
+                margin-right: 25px;
                 background: white;               
             }
             &--plein:hover {
-                animation : coeurplein .6s ease-in forwards;
+                -webkit-animation : coeurplein .6s ease-in forwards;
+                        animation : coeurplein .6s ease-in forwards;
                 transform-origin: bottom; 
             }
             &--plein:hover ~ &--vide{
                 opacity: 0;
             }
-            
             &--link{
             background-color: white;
             border-radius: 15px;
@@ -245,12 +229,8 @@ h2{
             align-items: center;
             justify-content: space-between;
             margin : 10px 10px;
-            
+            padding : 5px 5px ; 
             }
     }
 
 }
-
-
-
-/*# sourceMappingURL=style.css.map */

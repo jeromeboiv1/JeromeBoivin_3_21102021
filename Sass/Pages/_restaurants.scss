@@ -34,7 +34,8 @@ a{
     &__img{
         width : 100%;
         max-height: 400px;
-        object-fit: cover;     
+        -o-object-fit: cover;
+           object-fit: cover;     
     }
 }
 
@@ -44,7 +45,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin : 20px 20px;
+    margin : 10px 20px;
     font-family: 'Shrikhand',cursive;
 
     &--coeurplein{
@@ -55,13 +56,16 @@ a{
         -webkit-background-clip: text;
         color: transparent;
         opacity: 0;
+        margin-right : 25px
     }
     &--coeurvide{
         position : relative;
         z-index: 0;
+        margin-right: 25px;
     }
     &--coeurplein:hover {
-        animation : coeurplein 1s linear forwards;
+        -webkit-animation : coeurplein 1s linear forwards;
+                animation : coeurplein 1s linear forwards;
     }
     &--coeurplein:hover ~ &--coeurvide{
         color: transparent;
@@ -84,13 +88,11 @@ a{
             width : 98%;
         }
         &__title{
-            margin : 35px 0 35px 20px;
+            margin : 35px 0 15px 20px;
             border-bottom: 3px $color-new1 solid;
             width : 40px;
             padding-bottom: 5px;
             text-transform: uppercase;
-            
-            
         }
         
         &__plat:hover{
@@ -106,7 +108,6 @@ a{
                 border-radius: 0 15px 15px 0;
                 height : 100%;
                 margin-left : 10px;
-                
             }
         }
         &__plat{
@@ -134,8 +135,7 @@ a{
                 &--title h3, p:first-child{
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    overflow: hidden;
-                    
+                    overflow: hidden; 
             }
             &--check i{
                 
@@ -144,7 +144,6 @@ a{
             &--check{
                   visibility: hidden;         
             }
-            
         }
         &__btn{
             text-align: center;
@@ -166,30 +165,3 @@ a{
 
 
 }
-
-//////   MEDIA QUERIES   //////
-
-@media screen and (min-width: 1000px) {
-    .menu1{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    
-}
-    .menu2{
-        width: 100%;
-        overflow: hidden;
-    }
-    header img{
-        height : 400px
-    }
-}
-@media (min-width: 640px) and (max-width: 999px) {
-    .menu__plat{
-        max-width: 600px;
-        margin : 10px auto;
-    }
-}
-
-
-

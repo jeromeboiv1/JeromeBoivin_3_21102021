@@ -11,21 +11,16 @@
         &__title{
         font-family: 'Shrikhand',cursive;
         margin : 15px 20px;
-        font-size : 20px;
-        
+        font-size : 15px;
         letter-spacing: 1px;
-        
         color : white;
         }
         &__links{
-            
             margin-left: 20px;        
         }  
-        &__link{
-            
+        &__link{  
             color : white;
             margin-bottom : 5px;
-
             &--icone{
             position : absolute;    
             z-index: 0;
