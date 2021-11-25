@@ -22,6 +22,73 @@ a {
           box-shadow: 0 10px 15px rgba(128, 128, 128, 0.4);
 }
 
+.loader {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  visibility: visible;
+  -webkit-animation: loader 2.5s linear forwards;
+  animation: loader 2.5s linear forwards;
+  opacity: .9;
+}
+
+.loader__text {
+  font-family: 'Shrikhand', cursive;
+  font-size: 50px;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  opacity: 1;
+}
+
+.loader__barre {
+  width: 15px;
+  height: 50px;
+  background-color: #9356DC;
+  margin-right: 40px;
+  -webkit-animation: barres__grow 1s linear infinite;
+  animation: barres__grow 1s linear infinite;
+}
+
+.loader__barre:before {
+  content: '';
+  display: block;
+  position: relative;
+  left: 25px;
+  top: 0;
+  width: 15px;
+  height: 50px;
+  background-color: #FF79DA;
+  margin-right: 20px;
+  -webkit-animation: barres__grow 1s linear infinite;
+  animation: barres__grow 1s linear infinite;
+}
+
+.loader__barre:after {
+  content: '';
+  display: block;
+  position: relative;
+  left: -25px;
+  top: -50px;
+  width: 15px;
+  height: 50px;
+  background-color: #99E2D0;
+  margin-right: 20px;
+  -webkit-animation: barres__grow 1s linear infinite;
+  animation: barres__grow 1s linear infinite;
+}
+
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,8 +625,8 @@ a {
 }
 
 .plat1 {
-  -webkit-animation-name: slidedown;
-  animation-name: slidedown;
+  -webkit-animation-name: slideup;
+  animation-name: slideup;
   -webkit-animation-duration: 1500ms;
   animation-duration: 1500ms;
   opacity: 0;
@@ -570,8 +637,8 @@ a {
 }
 
 .plat2 {
-  -webkit-animation-name: slidedown;
-  animation-name: slidedown;
+  -webkit-animation-name: slideup;
+  animation-name: slideup;
   -webkit-animation-duration: 1800ms;
   animation-duration: 1800ms;
   opacity: 0;
@@ -582,8 +649,8 @@ a {
 }
 
 .plat3 {
-  -webkit-animation-name: slidedown;
-  animation-name: slidedown;
+  -webkit-animation-name: slideup;
+  animation-name: slideup;
   -webkit-animation-duration: 2100ms;
   animation-duration: 2100ms;
   opacity: 0;
@@ -594,8 +661,8 @@ a {
 }
 
 .plat4 {
-  -webkit-animation-name: slidedown;
-  animation-name: slidedown;
+  -webkit-animation-name: slideup;
+  animation-name: slideup;
   -webkit-animation-duration: 2100ms;
   animation-duration: 2100ms;
   opacity: 0;
@@ -605,7 +672,7 @@ a {
   animation-delay: 1200ms;
 }
 
-@-webkit-keyframes slidedown {
+@-webkit-keyframes slideup {
   from {
     -webkit-transition-timing-function: ease-in-out;
             transition-timing-function: ease-in-out;
@@ -619,7 +686,7 @@ a {
   }
 }
 
-@keyframes slidedown {
+@keyframes slideup {
   from {
     -webkit-transition-timing-function: ease-in-out;
             transition-timing-function: ease-in-out;
@@ -631,73 +698,6 @@ a {
             transform: translateY(0);
     opacity: 1;
   }
-}
-
-.loader {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 10;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  visibility: visible;
-  -webkit-animation: loader 2s linear forwards;
-  animation: loader 2s linear forwards;
-  opacity: .9;
-}
-
-.loader__text {
-  font-family: 'Shrikhand', cursive;
-  font-size: 50px;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: black;
-  color: white;
-  opacity: 1;
-}
-
-.loader__barre {
-  width: 15px;
-  height: 50px;
-  background-color: #9356DC;
-  margin-right: 40px;
-  -webkit-animation: barres__grow 1s linear infinite;
-  animation: barres__grow 1s linear infinite;
-}
-
-.loader__barre:before {
-  content: '';
-  display: block;
-  position: relative;
-  left: 25px;
-  top: 0;
-  width: 15px;
-  height: 50px;
-  background-color: #FF79DA;
-  margin-right: 20px;
-  -webkit-animation: barres__grow 1s linear infinite;
-  animation: barres__grow 1s linear infinite;
-}
-
-.loader__barre:after {
-  content: '';
-  display: block;
-  position: relative;
-  left: -25px;
-  top: -50px;
-  width: 15px;
-  height: 50px;
-  background-color: #99E2D0;
-  margin-right: 20px;
-  -webkit-animation: barres__grow 1s linear infinite;
-  animation: barres__grow 1s linear infinite;
 }
 
 @-webkit-keyframes barres__grow {
